@@ -11,18 +11,18 @@ sh "ls -l"
 
 stage('Build docker image'){
 
-sh "docker build -t ccheroly:latest ."
+sh "docker build -t devopsexams:latest ."
 }
 
 stage('Docker login to hub'){
-sh "docker login -u 'ccheroly' -p '1Mdcccl3x3' "
+sh "docker login -u 'ccheroly' -p 'CheroKapo219' "
 }
 
 stage('Apply docker tag ') {
-sh "docker tag ccheroly:latest ccheroly/ccheroly:latest"
+sh "docker tag devopsexams:latest ccheroly/devopsexams:latest"
 }
  stage('push the image') {
-sh "docker push ccheroly/ccheroly:latest"
+sh "docker push ccheroly/devopsexams:latest"
 }
 stage('Apply changes to the environment') {
 sh "ls -l"
