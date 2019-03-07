@@ -15,7 +15,7 @@ sh "docker build -t devopsexams:latest ."
 }
 
 stage('Docker login to hub'){
-sh "docker login -u 'ccheroly' -p 'CheroKapo219' "
+sh "docker login -u 'ccheroly' -p 'CheroKemb@219' "
 }
 
 stage('Apply docker tag ') {
